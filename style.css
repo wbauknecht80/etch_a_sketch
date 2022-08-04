@@ -3,6 +3,17 @@
     --grid-rows: 16;
 }
 
+#head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numButton {
+    font-size: x-large;
+    margin: 8px;
+}
+
 #container {
     display: grid;
     grid-gap: 1em;

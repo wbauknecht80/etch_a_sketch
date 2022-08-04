@@ -9,15 +9,26 @@ function makeRows(rows, cols) {
         let cell = document.createElement("div")
         cell.innerText = (c+1);
         container.appendChild(cell).className = "grid-item";
-        
+        cell.addEventListener('mouseover', 
+    e => e.target.classList.add('my-color-class')
+)
     }
 }
 
-/**function randomColor() {
-    r = Math.random() * 255;
-    g = Math.random() * 255;
-    b = Math.random() * 225;
-}**/
 
-makeRows(16, 16);
+function numPrompt() {
+    var userNum = prompt("Enter a number less than or equal to 100");
+    alert(userNum);
+    if (userNum > 100) {
+        var userNUm = prompt("Ahem.. I said.. LESS.. than 100.");
+    } else {
+        userInt = parseInt(userNum);
+        makeRows(userInt, userInt);
+    }
+}
+
+document.querySelector('#numButton').addEventListener('click', numPrompt);
+
+
+
 

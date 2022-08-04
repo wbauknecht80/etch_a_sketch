@@ -1,7 +1,21 @@
-.box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 10px;
+:root {
+    --grid-cols: 16;
+    --grid-rows: 16;
+}
 
+#container {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+.grid-item {
+    padding: 1em;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.my-color-class {
+    background-color: black;
 }

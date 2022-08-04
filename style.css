@@ -1,7 +1,4 @@
-:root {
-    --grid-cols: 16;
-    --grid-rows: 16;
-}
+
 
 #head {
     display: flex;
@@ -19,6 +16,8 @@
     grid-gap: 1em;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
+    max-width: 960px;
+    max-height: 960px;
 }
 
 .grid-item {

@@ -1,4 +1,6 @@
-
+body {
+    background-color: slategrey;
+}
 
 #head {
     display: flex;
@@ -9,6 +11,29 @@
 .buttonContainer {
     display: flex;
     flex-direction: column;
+
+}
+
+.colorButtons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.blackButton {
+    background-color: black;
+    color: white;
+}
+
+.redButton {
+    background-color: red;
+}
+
+.blueButton {
+    background-color: blue;
+}
+
+.greenButton {
+    background-color: green;
 }
 
 .numButton {
@@ -35,6 +60,7 @@
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     max-width: 500px;
     max-height: 500px;
+    background-color: white;
 }
 
 .grid-item {

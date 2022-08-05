@@ -39,3 +39,11 @@ function numPrompt() {
 
 
 document.querySelector('#numButton').addEventListener('click', numPrompt);
+
+/** const black = document.querySelector('#blackButotn');
+document.querySelector('blackButton').addEventListener('click', function (){
+    let myColorClass = docu
+})
+document.querySelector('redButton').addEventListener('click',)
+document.querySelector('blueButton').addEventListener('click',)
+document.querySelector('greenButton').addEventListener('click',)

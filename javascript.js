@@ -1,6 +1,6 @@
 const container = document.getElementById("container");
 
-
+var color;
 
 function makeRows(rowNum) {
     container.replaceChildren()
@@ -12,13 +12,21 @@ function makeRows(rowNum) {
         let cell = document.createElement("div")
         cell.style.setProperty= ('width', `${500/rowNum}px`);
         cell.style.setProperty= ('height', `${500/rowNum}px`);
+        cell.addEventListener('click', changeColor)
         container.appendChild(cell).className = "grid-item";
-        cell.addEventListener('click', 
-    e => e.target.classList.add('my-color-class')
-)
+
     }
 }
 
+function changeColor(e) {
+    Object.assign(e.target.style, {
+        background : color,
+    });
+}
+
+function choose(choice){
+    color = choice;
+}
 
 function numPrompt() {
     var userNum = prompt("Enter a number less than or equal to 100");
@@ -35,15 +43,6 @@ function numPrompt() {
     }
 }
 
-
-
-
 document.querySelector('#numButton').addEventListener('click', numPrompt);
 
-/** const black = document.querySelector('#blackButotn');
-document.querySelector('blackButton').addEventListener('click', function (){
-    let myColorClass = docu
-})
-document.querySelector('redButton').addEventListener('click',)
-document.querySelector('blueButton').addEventListener('click',)
-document.querySelector('greenButton').addEventListener('click',)
+

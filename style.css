@@ -9,19 +9,30 @@
 .numButton {
     font-size: x-large;
     margin: 8px;
+
 }
 
-#container {
+.contents {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.container {
     display: grid;
-    grid-gap: 1em;
+    border: 5px;
+    border-style: ridge;
+    width: 500px;
+    height: 500px;
+    /*grid-gap: 1em;*/
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
-    max-width: 960px;
-    max-height: 960px;
+    max-width: 500px;
+    max-height: 500px;
 }
 
 .grid-item {
-    padding: 1em;
     border: 1px solid #ddd;
     text-align: center;
 }

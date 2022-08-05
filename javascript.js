@@ -2,18 +2,17 @@ const container = document.getElementById("container");
 
 
 
-function makeRows(userNum) {
-    container.style.setProperty('--grid-rows', userNum);
-    container.style.setProperty('--grind-cols', userNum);
-    document.documentElement.style.setProperty('--grid-rows', userNum)
-    document.documentElement.style.setProperty('--grid-cols', userNum)
-    for (c= 0; c <(userNum*userNum); c++) {
+function makeRows(rowNum) {
+    container.style.setProperty('--grid-rows', rowNum);
+    container.style.setProperty('--grind-cols', rowNum);
+    document.documentElement.style.setProperty('--grid-rows', rowNum);
+    document.documentElement.style.setProperty('--grid-cols', rowNum);
+    for (c= 0; c <(rowNum*rowNum); c++) {
         let cell = document.createElement("div")
-        cell.style.width = `${960/userNum}px`
-        cell.style.height = `${960/userNum}px`
-        cell.innerText = (c+1);
+        cell.style.setProperty= ('width', `${500/rowNum}px`);
+        cell.style.setProperty= ('height', `${500/rowNum}px`);
         container.appendChild(cell).className = "grid-item";
-        cell.addEventListener('mouseover', 
+        cell.addEventListener('click', 
     e => e.target.classList.add('my-color-class')
 )
     }

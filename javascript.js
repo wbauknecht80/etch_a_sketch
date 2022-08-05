@@ -12,7 +12,7 @@ function makeRows(rowNum) {
         let cell = document.createElement("div")
         cell.style.setProperty= ('width', `${500/rowNum}px`);
         cell.style.setProperty= ('height', `${500/rowNum}px`);
-        cell.addEventListener('click', changeColor)
+        cell.addEventListener('mouseover', changeColor)
         container.appendChild(cell).className = "grid-item";
 
     }

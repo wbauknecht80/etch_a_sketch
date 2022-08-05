@@ -6,6 +6,11 @@
     justify-content: center;
 }
 
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+}
+
 .numButton {
     font-size: x-large;
     margin: 8px;

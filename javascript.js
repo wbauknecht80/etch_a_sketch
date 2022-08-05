@@ -3,6 +3,7 @@ const container = document.getElementById("container");
 
 
 function makeRows(rowNum) {
+    container.replaceChildren()
     container.style.setProperty('--grid-rows', rowNum);
     container.style.setProperty('--grind-cols', rowNum);
     document.documentElement.style.setProperty('--grid-rows', rowNum);
@@ -23,11 +24,18 @@ function numPrompt() {
     var userNum = prompt("Enter a number less than or equal to 100");
     alert(userNum);
     if (userNum > 100) {
-        var userNUm = prompt("Ahem.. I said.. LESS.. than 100.");
+        alert("Ahem.. I said.. LESS.. than 100.");
+        numPrompt()
+    } else if (parseInt(userNum) !== parseInt(userNum)) {
+        alert("Uh.. I said a number..?")
+        numPrompt()
     } else {
         userInt = parseInt(userNum);
         makeRows(userInt);
     }
 }
+
+
+
 
 document.querySelector('#numButton').addEventListener('click', numPrompt);

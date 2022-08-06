@@ -58,6 +58,6 @@ function numPrompt() {
 }
 
 document.querySelector('#numButton').addEventListener('click', numPrompt);
-document.querySelector('#clearButton').addEventListener('click', clearGrid)
+
 
 

@@ -2,6 +2,11 @@ const container = document.getElementById("container");
 
 var color;
 
+
+let mouseDown = false;
+document.body.onmousedown = () => (mouseDown = true);
+document.body.onmouseup = () => (mouseDown = false)
+
 function makeRows(rowNum) {
     container.replaceChildren()
     container.style.setProperty('--grid-rows', rowNum);
@@ -13,20 +18,27 @@ function makeRows(rowNum) {
         cell.style.setProperty= ('width', `${500/rowNum}px`);
         cell.style.setProperty= ('height', `${500/rowNum}px`);
         cell.addEventListener('mouseover', changeColor)
+        cell.addEventListener('mousedown', changeColor)
         container.appendChild(cell).className = "grid-item";
 
     }
 }
 
 function changeColor(e) {
+    if (e.type === 'mouseover' && !mouseDown) {
+        return
+    } else { 
     Object.assign(e.target.style, {
         background : color,
-    });
+    })};
 }
 
 function choose(choice){
     color = choice;
 }
+
+makeRows(16);
+var color = 'black';
 
 function numPrompt() {
     var userNum = prompt("Enter a number less than or equal to 100");
@@ -34,6 +46,8 @@ function numPrompt() {
     if (userNum > 100) {
         alert("Ahem.. I said.. LESS.. than 100.");
         numPrompt()
+    } else if (userNum === null){
+        return;
     } else if (parseInt(userNum) !== parseInt(userNum)) {
         alert("Uh.. I said a number..?")
         numPrompt()
@@ -44,5 +58,6 @@ function numPrompt() {
 }
 
 document.querySelector('#numButton').addEventListener('click', numPrompt);
+document.querySelector('#clearButton').addEventListener('click', clearGrid)
 
 

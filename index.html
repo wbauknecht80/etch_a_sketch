@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>EtchASketch</title>
+        <title>Billy's Etch-A-Sketch</title>
         <link rel="stylesheet" href ="style.css">
         <script src = "javascript.js" defer></script>
     </head>
@@ -13,9 +13,9 @@
                     Welcome to Billy's Etch-a-sketch, V1!
                 </h1>
                 <div class = "buttonContainer">
-                    <button id="numButton" class = "numButton">
-                        Choose Grid Size
-                    </button>
+                        <button id="numButton" class = "numButton">
+                            Resize Grid
+                        </button>
                     <div class = "colorButtons">
                         <button onClick='choose("black")' id = "blackButton" class = "blackButton">
                             Black
@@ -28,6 +28,9 @@
                         </button> 
                         <button onClick='choose("green")' id="greenButton" class = "greenButton">
                             Green
+                        </button>
+                        <button onClick='choose("white")' id="eraser" class = "eraser">
+                            Eraser
                         </button>
                     </div>
                 </div>

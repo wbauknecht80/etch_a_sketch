@@ -1,12 +1,14 @@
 body {
-    background-color: slategrey;
+    background-image: url(../etch_a_sketch/IMG-4929.jpg);
+
 }
 
 .title {
     font-family: 'Times New Roman', Times, serif;
     border-style: ridge;
     border-width: 16px;
-    background-color: antiquewhite;
+    background-color: black;
+    color: white;
     padding: 8px;
 }
 
@@ -52,6 +54,7 @@ body {
 
 }
 
+
 .contents {
     display: flex;
     align-items: center;
@@ -73,7 +76,7 @@ body {
 }
 
 .grid-item {
-    border: 1px solid #ddd;
+    /*border: 0.1px solid #ddd;*/
     text-align: center;
 }
 
